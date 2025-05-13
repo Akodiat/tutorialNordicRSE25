@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>3. JavaScript</title>
+
+    <!-- Make things look better by including good css defaults -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css">
+
+  </head>
+  <body>
+    <header>
+      <a href="../index.html">Return</a>
+      <h1>3. Simple HTML page with CSS and JS</h1>
+    </header>
+    <main>
+      <article>
+        Calculate the first n prime numbers:
+        <fieldset role="group">
+            <input id="numberInput" type="number" min="1" value="10"/>
+            <button id="calcButton">Calculate</button>
+          </fieldset>
+      </article>
+      <article id="outputContainer"></article>
+    </main>
+    <footer>
+      <small>
+      Created by Dr. Joakim Bohlin, Chalmers, Infravis (<a href="https://github.com/Akodiat/tutorialNordicRSE25">source</a>).<br>
+      </small>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

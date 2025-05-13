@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <title>7. Loading data</title>
+
+    <!-- Make things look better by including good css defaults -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css">
+
+    <!-- Vega-lite plotting -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@6.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.29.0"></script>
+
+    <!-- Undo changes to plot css from pico -->
+    <style>
+      .vega-embed summary {margin: 5px}
+      .vega-embed summary::after {display: none}
+    </style>
+
+
+  </head>
+  <body>
+    <header>
+      <a href="../index.html">Return</a>
+      <h1>7. Loading data</h1>
+    </header>
+    <main>
+      <article>
+        <input id="fileInput" type="file">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">x</th>
+                    <th scope="col">y</th>
+                    <th scope="col">z</th>
+                    <th scope="col">size</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+      </article>
+    </main>
+    <footer>
+      <small>
+      Created by Dr. Joakim Bohlin, Chalmers, Infravis (<a href="https://github.com/Akodiat/tutorialNordicRSE25">source</a>).<br>
+      </small>
+    </footer>
+
+    <template id="rowTemplate">
+        <tr>
+            <th scope="row"></th>
+            <td></td><td></td><td></td><td></td>
+        </tr>
+    </template>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
