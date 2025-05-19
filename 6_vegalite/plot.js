@@ -12,6 +12,7 @@ function plotPrimes(n, targetContainer) {
     const vlSpec = {
         $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
         data: {values: values},
+        width: 600,
         title: `A not very useful plot of the first ${n} primes`,
         mark: 'bar',
         encoding: {

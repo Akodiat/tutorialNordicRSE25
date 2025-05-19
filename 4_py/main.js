@@ -11,11 +11,6 @@ let pyodide = await loadPyodide();
 // Load numpy
 await pyodide.loadPackage("micropip");
 
-// Uncomment these if you want numbpy, matplotlib, etc
-//const micropip = pyodide.pyimport("micropip");
-//await micropip.install("numpy");
-//await micropip.install("matplotlib");
-
 // Load the python code from file
 await pyodide.runPythonAsync(`
     from pyodide.http import pyfetch

@@ -2,7 +2,7 @@
  * Calculate the first n primes
  * from https://stackoverflow.com/a/35112760
  * @param {number} n Number of primes to return
- * @returns {number[] List of first n primes}
+ * @returns {number[]} List of first n primes
  */
 function calcFirstNPrimes(n) {
     const primes = [2];

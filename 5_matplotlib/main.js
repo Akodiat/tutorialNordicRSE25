@@ -2,8 +2,8 @@
 const calcButton = document.getElementById("calcButton");
 const numberInput = document.getElementById("numberInput");
 const inputContainer = document.getElementById("inputContainer");
-const loadingIndicator = document.getElementById("loadingIndicator");
 const plotContainer = document.getElementById("plotContainer");
+const loadingIndicator = document.getElementById("loadingIndicator");
 
 // Make sure plots are appended to the correct container
 document.pyodideMplTarget = plotContainer;
@@ -33,7 +33,7 @@ loadingIndicator.hidden = true;
 inputContainer.hidden = false;
 
 // When the button is clicked, get n from number input,
-// run calculation, then write output to the output container.
+// run calculation, then plot.
 calcButton.onclick = () => {
     const n = numberInput.valueAsNumber;
     pyPrimes.plotPrimes(n);
