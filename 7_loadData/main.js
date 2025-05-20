@@ -1,8 +1,12 @@
 
 function populateTable(data) {
     const tableBody = document.getElementById("tableBody");
-    tableBody.innerHTML = "";
     const template = document.getElementById("rowTemplate");
+
+    // Clear table
+    tableBody.innerHTML = "";
+
+    // Fill table with data
     for (const d of data) {
         const row = template.content.cloneNode(true);
         let td = row.querySelectorAll("th, td");
@@ -23,10 +27,13 @@ function populateTable(data) {
  * @returns
  */
 function parseCSV(csvStr, sep=",") {
+    // Split on newlines
     let lines = csvStr.split("\n");
-    console.log(lines);
+
+    // Separate header from following lines
     const header = lines[0].split(sep);
     lines = lines.slice(1);
+
     return lines.map(line => {
         const values = line.split(sep);
         const e = {};
@@ -40,7 +47,6 @@ function parseCSV(csvStr, sep=",") {
 async function textFileFromPath(path) {
     const res = await fetch(path);
     const text = await res.text();
-
     return text;
 }
 
